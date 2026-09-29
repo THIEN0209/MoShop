@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\wpf\\MoShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2617B6-3F12-4BEB-893D-E825905FCABE}|MoShop\\MoShop.csproj|e:\\wpf\\moshop\\moshop\\models\\moshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2617B6-3F12-4BEB-893D-E825905FCABE}|MoShop\\MoShop.csproj|solutionrelative:moshop\\models\\moshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2617B6-3F12-4BEB-893D-E825905FCABE}|MoShop\\MoShop.csproj|e:\\wpf\\moshop\\moshop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2617B6-3F12-4BEB-893D-E825905FCABE}|MoShop\\MoShop.csproj|solutionrelative:moshop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2617B6-3F12-4BEB-893D-E825905FCABE}|MoShop\\MoShop.csproj|e:\\wpf\\moshop\\moshop\\models\\chitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2617B6-3F12-4BEB-893D-E825905FCABE}|MoShop\\MoShop.csproj|solutionrelative:moshop\\models\\chitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MoShopContext.cs",
+              "DocumentMoniker": "E:\\wpf\\MoShop\\MoShop\\Models\\MoShopContext.cs",
+              "RelativeDocumentMoniker": "MoShop\\Models\\MoShopContext.cs",
+              "ToolTip": "E:\\wpf\\MoShop\\MoShop\\Models\\MoShopContext.cs",
+              "RelativeToolTip": "MoShop\\Models\\MoShopContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAACOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T07:33:48.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\wpf\\MoShop\\MoShop\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MoShop\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\wpf\\MoShop\\MoShop\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MoShop\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T05:23:14.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Chitiet.cs",
+              "DocumentMoniker": "E:\\wpf\\MoShop\\MoShop\\Models\\Chitiet.cs",
+              "RelativeDocumentMoniker": "MoShop\\Models\\Chitiet.cs",
+              "ToolTip": "E:\\wpf\\MoShop\\MoShop\\Models\\Chitiet.cs",
+              "RelativeToolTip": "MoShop\\Models\\Chitiet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T05:22:52.436Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

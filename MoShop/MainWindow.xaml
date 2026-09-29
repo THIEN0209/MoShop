@@ -1,0 +1,371 @@
+﻿<Window x:Class="MoShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoShop"
+        xmlns:localModels="clr-namespace:MoShop.Models"
+        mc:Ignorable="d"
+        Title="MoShop"
+        Width="1200"
+        Height="700"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <x:Array Type="localModels:CCT" x:Key="rsCT"></x:Array>
+
+    </Window.Resources>
+    <Grid Background="#F5F5F5" Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="1.4*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <!-- ================= THANH MENU ================= -->
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+        Background="White"
+        CornerRadius="12"
+        Padding="20,15">
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Left">
+
+                <!-- NÚT THỐNG KÊ TRONG THÁNG -->
+                <Button x:Name="btnThongKeThang"
+                Content="📊  Thống kê trong tháng"
+                Height="45"
+                Padding="20,0"
+                FontSize="15"
+                FontWeight="SemiBold"
+                Foreground="White"
+                Background="#4A90D9"
+                BorderThickness="0"
+                Cursor="Hand"
+                Click="btnThongKeThang_Click">
+
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+
+                </Button>
+
+
+                <!-- NÚT DOANH SỐ -->
+                <Button x:Name="btnDoanhSo"
+                Content="💰  Doanh số"
+                Height="45"
+                Padding="20,0"
+                Margin="15,0,0,0"
+                FontSize="15"
+                FontWeight="SemiBold"
+                Foreground="White"
+                Background="#F5A623"
+                BorderThickness="0"
+                Cursor="Hand"
+                Click="btnDoanhSo_Click">
+
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+
+                </Button>
+
+            </StackPanel>
+
+        </Border>
+
+
+        <!-- ================= KHOẢNG CÁCH DƯỚI MENU ================= -->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+
+
+        <!-- ================= BÊN TRÁI ================= -->
+        <Border Grid.Row="2" Grid.Column="0"
+        Background="White"
+        CornerRadius="12"
+        Padding="30">
+
+            <Grid >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <!-- Ô NHẬP TIỀN -->
+                <TextBox x:Name="txtGiaTriTien"
+                 Grid.Row="0"
+                     Text=""
+                 FontSize="40"
+                 FontWeight="SemiBold"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 BorderThickness="0"
+                 Background="Transparent"
+                 Foreground="#333333"
+                 Padding="10"
+                 InputMethod.IsInputMethodEnabled="False"
+                 />
+
+
+                <!-- NÚT THU / CHI -->
+                <Grid Grid.Row="1"
+              Margin="0,20,0,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- NÚT THU -->
+                    <Button x:Name="btnThu"
+                    Grid.Column="0"
+                    Content="THU"
+                    Height="60"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Background="#2EAD67"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                        Click="btnThu_Click"/>
+
+
+                    <!-- NÚT CHI -->
+                    <Button x:Name="btnChi"
+                    Grid.Column="2"
+                    Content="CHI"
+                    Height="60"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Background="#E05252"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                        Click="btnChi_Click"/>
+
+                </Grid>
+
+            </Grid>
+
+        </Border>
+
+
+        <!-- ================= KHOẢNG CÁCH ================= -->
+        <Grid Grid.Row="2" Grid.Column="1"/>
+
+
+        <!-- ================= BÊN PHẢI ================= -->
+        <Border Grid.Row="2" Grid.Column="2"
+    Background="White"
+    CornerRadius="12"
+    Padding="15">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <!-- TỔNG THU / CHI -->
+                <Grid Grid.Row="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- TỔNG THU -->
+                    <TextBox x:Name="txtTongThu"
+                 Grid.Column="0"
+                 IsReadOnly="True"
+                 Text="Tổng thu: 0 đ"
+                 FontSize="20"
+                 FontWeight="SemiBold"
+                 Foreground="#2EAD67"
+                 Background="#F0FFF6"
+                 BorderThickness="0"
+                 Padding="15"
+                 VerticalContentAlignment="Center"/>
+
+
+                    <!-- TỔNG CHI -->
+                    <TextBox x:Name="txtTongChi"
+                 Grid.Column="2"
+                 IsReadOnly="True"
+                 Text="Tổng chi: 0 đ"
+                 FontSize="20"
+                 FontWeight="SemiBold"
+                 Foreground="#E05252"
+                 Background="#FFF3F3"
+                 BorderThickness="0"
+                 Padding="15"
+                 VerticalContentAlignment="Center"/>
+
+                </Grid>
+
+
+                <!-- DANH SÁCH -->
+                <DataGrid Grid.Row="2"
+              x:Name="dgCT"
+              AutoGenerateColumns="False"
+              ItemsSource="{StaticResource rsCT}"
+              CanUserAddRows="False"
+              CanUserResizeRows="False"
+              HeadersVisibility="Column"
+              GridLinesVisibility="None"
+              RowHeight="50"
+              BorderThickness="0"
+              Background="White"
+              FontSize="15"
+              ScrollViewer.VerticalScrollBarVisibility="Auto"
+              ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                    <DataGrid.Resources>
+
+                        <!-- HEADER -->
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#F5F5F5"/>
+                            <Setter Property="Foreground" Value="#333333"/>
+                            <Setter Property="FontWeight" Value="SemiBold"/>
+                            <Setter Property="Height" Value="45"/>
+                            <Setter Property="Padding" Value="15,0"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+
+
+                        <!-- ROW -->
+                        <Style TargetType="DataGridRow">
+
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+
+                            <Style.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background"
+                                Value="#F8F8F8"/>
+                                </Trigger>
+
+                            </Style.Triggers>
+
+                        </Style>
+
+
+                        <!-- CELL -->
+                        <Style TargetType="DataGridCell">
+
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Padding" Value="15,0"/>
+                            <Setter Property="VerticalContentAlignment"
+                        Value="Center"/>
+
+                        </Style>
+
+                    </DataGrid.Resources>
+
+
+                    <DataGrid.Columns>
+
+                        <!-- THỜI GIAN -->
+                        <DataGridTemplateColumn Header="Thời gian"
+                                    Width="1.3*">
+
+                            <DataGridTemplateColumn.CellTemplate>
+
+                                <DataTemplate>
+
+                                    <Border BorderBrush="#DDDDDD"
+                                BorderThickness="0,0,1,0"
+                                Padding="0,0,15,0">
+
+                                        <TextBlock Text="{Binding NgayGioHienThi}"
+                                       VerticalAlignment="Center"/>
+
+                                    </Border>
+
+                                </DataTemplate>
+
+                            </DataGridTemplateColumn.CellTemplate>
+
+                        </DataGridTemplateColumn>
+
+
+                        <!-- GIÁ TIỀN -->
+                        <DataGridTemplateColumn Header="Giá tiền"
+                                    Width="1*">
+
+                            <DataGridTemplateColumn.CellTemplate>
+
+                                <DataTemplate>
+
+                                    <TextBlock Text="{Binding GiaTriTienHienThi}"
+                                   Foreground="{Binding MauTien}"
+                                   FontWeight="SemiBold"
+                                   VerticalAlignment="Center"/>
+
+                                </DataTemplate>
+
+                            </DataGridTemplateColumn.CellTemplate>
+
+                        </DataGridTemplateColumn>
+
+
+                        <!-- XÓA -->
+                        <DataGridTemplateColumn Header=""
+                                    Width="65">
+
+                            <DataGridTemplateColumn.CellTemplate>
+
+                                <DataTemplate>
+
+                                    <Button Content="×"
+                                Width="30"
+                                Height="30"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                Foreground="White"
+                                Background="#E05252"
+                                BorderThickness="0"
+                                Cursor="Hand"
+                                Tag="{Binding Ma}"
+                                Click="Button_Click"/>
+
+                                </DataTemplate>
+
+                            </DataGridTemplateColumn.CellTemplate>
+
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</Window>
